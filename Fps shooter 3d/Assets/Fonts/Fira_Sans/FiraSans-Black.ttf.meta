@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 6543cc75e4eb1439689e2d2efe6212a3
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Fira Sans
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b4d2a74a7de0546a680790f465a001f1, type: 3}
+  - {fileID: 12800000, guid: 5118f8d92c80f43c2ba28fa4de8cc0cd, type: 3}
+  - {fileID: 12800000, guid: e3a333ed536ec435d801018b56bcc7cf, type: 3}
+  - {fileID: 12800000, guid: e315fc1b3ff134838bf4c54134cbfc8f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
