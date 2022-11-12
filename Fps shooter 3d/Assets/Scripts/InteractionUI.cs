@@ -13,6 +13,13 @@ public class InteractionUI : MonoBehaviour
 
     public GameObject text;
 
+    private AnimationHandler animationHandlerScriptRef;
+
+    private void Awake()
+    {
+        animationHandlerScriptRef = GetComponent<AnimationHandler>();
+    }
+
     private void Update()
     {
         interactiveObjectInRange = Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out ray,
@@ -26,6 +33,14 @@ public class InteractionUI : MonoBehaviour
         else
         {
             text.gameObject.active = false;
+        }
+
+        if(interactiveObjectInRange && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("sdfefefe");
+
+            animationHandlerScriptRef.AnimationTriggerFunction();
+
         }
     }
 

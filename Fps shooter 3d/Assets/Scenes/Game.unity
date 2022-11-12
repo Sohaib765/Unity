@@ -2538,7 +2538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &627782229
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9228,29 +9228,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f411dce24a9f4a29a64f75a7056ab08, type: 3}
---- !u!1 &919132148709976135 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7500944827534764407, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
-  m_PrefabInstance: {fileID: 7267081666885878064}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &919132148709976137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132148709976135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8714a13fbda984763a4b6866afc48e75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactiveObjectInRange: 0
-  playerCameraTransform: {fileID: 1999501671}
-  interactivelayerMask:
-    serializedVersion: 2
-    m_Bits: 2097152
-  text: {fileID: 627782228}
 --- !u!1001 &2128771883459276707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9765,42 +9742,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 157708089, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
-      propertyPath: m_Layer
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 1487057681, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
-      propertyPath: m_Layer
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 1875640924463381296, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
-      propertyPath: m_Layer
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 1960171564427293258, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
-      propertyPath: m_Layer
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 2022028010413691958, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
-      propertyPath: m_Layer
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 3027683865380567180, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
-      propertyPath: m_Layer
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 3780009184463568509, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
-      propertyPath: m_Layer
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 5416271671523021156, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
-      propertyPath: m_Layer
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123950874364546451, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
-      propertyPath: m_Layer
-      value: 21
-      objectReference: {fileID: 0}
+    - target: {fileID: 919132148709976137, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 627782228}
+    - target: {fileID: 919132148709976137, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
+      propertyPath: playerCameraTransform
+      value: 
+      objectReference: {fileID: 1999501671}
     - target: {fileID: 7157175526962181069, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -9845,29 +9794,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7267081666327699880, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
-      propertyPath: m_Layer
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 7435590860803330289, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
-      propertyPath: m_Layer
-      value: 21
-      objectReference: {fileID: 0}
     - target: {fileID: 7500944827534764407, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
       propertyPath: m_Name
       value: Second Sci-fi door
-      objectReference: {fileID: 0}
-    - target: {fileID: 7500944827534764407, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
-      propertyPath: m_Layer
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 8022529184805709378, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
-      propertyPath: m_Layer
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 8316469870261017156, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}
-      propertyPath: m_Layer
-      value: 21
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13d19f9874aa14cd9a360f474aa5ef67, type: 3}

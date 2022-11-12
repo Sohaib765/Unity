@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 157708090}
   - component: {fileID: 157708091}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Door 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1487057682}
   - component: {fileID: 1487057683}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Door 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 3901723616296848577}
   - component: {fileID: 7250182736479778836}
   - component: {fileID: 7915999202092544141}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Cube.026
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 1210006973641027613}
   - component: {fileID: 5595616659110373247}
   - component: {fileID: 5031610100121511670}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Cube.027
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 5303504402788904870}
   - component: {fileID: 1108372163947165239}
   - component: {fileID: 7267081666160122238}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Door frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 6484078446022083417}
   - component: {fileID: 1989668382916275256}
   - component: {fileID: 6929280188080474744}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Cube.030
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 2565295056013121995}
   - component: {fileID: 3345393299767511285}
   - component: {fileID: 1390216370459046316}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Cube.028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -539,7 +539,7 @@ GameObject:
   - component: {fileID: 1320118753795743343}
   - component: {fileID: 3820340858514321188}
   - component: {fileID: 8576797377110064514}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Cube.025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 8017095165137159927}
   - component: {fileID: 5511826475594595311}
   - component: {fileID: 338761437045279352}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Cube.029
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,7 +704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7267081666327699881}
   - component: {fileID: 659284122}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Door parent obj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,7 +759,7 @@ GameObject:
   - component: {fileID: 8624736636210682302}
   - component: {fileID: 8695374296600228761}
   - component: {fileID: 7647787962915784708}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Cube.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,7 +841,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7157175526962181069}
   - component: {fileID: 919132148709976136}
-  m_Layer: 0
+  - component: {fileID: 919132148709976137}
+  m_Layer: 21
   m_Name: Second Sci-fi door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -879,6 +880,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnim: {fileID: 659284122}
+--- !u!114 &919132148709976137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7500944827534764407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8714a13fbda984763a4b6866afc48e75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactiveObjectInRange: 0
+  playerCameraTransform: {fileID: 0}
+  interactivelayerMask:
+    serializedVersion: 2
+    m_Bits: 2097152
+  text: {fileID: 0}
 --- !u!1 &8022529184805709378
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +909,7 @@ GameObject:
   - component: {fileID: 6278795968109226152}
   - component: {fileID: 3377579023710510646}
   - component: {fileID: 6618496851392791273}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -974,7 +993,7 @@ GameObject:
   - component: {fileID: 5411076667633214584}
   - component: {fileID: 7630199690408387939}
   - component: {fileID: 7267081666430164369}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Door secondary frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}

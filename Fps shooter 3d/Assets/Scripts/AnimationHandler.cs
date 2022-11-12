@@ -8,18 +8,23 @@ public class AnimationHandler : MonoBehaviour
 
     //public AudioSource gasAudio;
 
-    
-
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O))
+        StartCoroutine(CloseDoor());
+    }
+
+    public void AnimationTriggerFunction()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
         {
             doorAnim.SetBool("isTriggered", true);
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            doorAnim.SetBool("isTriggered", false);
-        }
+    private IEnumerator CloseDoor()
+    {
+        yield return new WaitForSeconds(5f);
+
+        doorAnim.SetBool("isTriggered", false);
     }
 }
