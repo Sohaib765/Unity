@@ -8,25 +8,7 @@ public class AnimationHandler : MonoBehaviour
 
     //public AudioSource gasAudio;
 
-    /*private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            doorAnim.SetBool("IsTriggered", true);
-            Debug.Log("Open");
-
-            gasAudio.Play();
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            doorAnim.SetBool("IsTriggered", false);
-            Debug.Log("Close");
-        }
-    }*/
+    
 
     public void Update()
     {
