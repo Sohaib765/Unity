@@ -6,11 +6,11 @@ public class AnimationHandler : MonoBehaviour
 {
     public Animator doorAnim;
 
-    public AudioSource gasAudio;
+    //public AudioSource gasAudio;
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("Medium cube"))
+        if (other.CompareTag("Player"))
         {
             doorAnim.SetBool("IsTriggered", true);
             Debug.Log("Open");
@@ -21,10 +21,23 @@ public class AnimationHandler : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("Medium cube"))
+        if (other.CompareTag("Player"))
         {
             doorAnim.SetBool("IsTriggered", false);
             Debug.Log("Close");
+        }
+    }*/
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            doorAnim.SetBool("isTriggered", true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            doorAnim.SetBool("isTriggered", false);
         }
     }
 }
