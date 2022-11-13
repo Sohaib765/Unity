@@ -1976,7 +1976,7 @@ MonoBehaviour:
   attackPoint: {fileID: 7518089827948266277}
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 853248
+    m_Bits: 2950400
   bulletholeGraphics: {fileID: 2944751874095173934, guid: 124b26210d0b44b3fb1352765c2c1908, type: 3}
   camShakeMagnitude: 0.1
   camShakeDuration: 0.1

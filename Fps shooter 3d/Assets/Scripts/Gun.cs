@@ -141,7 +141,7 @@ public class Gun : MonoBehaviour
                 Debug.Log("You hit an enemy");
 
                 //Add some force to the object when being hit
-                var force = 10f;
+                var force = 20f;
                 Rigidbody rb = rayHit.collider.gameObject.GetComponent<Rigidbody>();
                 rb.AddForce(transform.forward * force, ForceMode.Impulse);
             }

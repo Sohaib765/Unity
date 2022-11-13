@@ -75,7 +75,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         //Script refrences
-        IN_UI = GameObject.FindGameObjectWithTag("Weapon_Trigger").GetComponent<InteractionUI>();
         pickandDropScriptRef = GameObject.FindGameObjectWithTag("Weapon").GetComponent<PIckAndDrop>();
 
         //isReadyToMove = true;

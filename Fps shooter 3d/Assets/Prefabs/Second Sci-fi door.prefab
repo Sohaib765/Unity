@@ -898,6 +898,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2097152
   text: {fileID: 0}
+  doorLocked_Text: {fileID: 0}
+  card: {fileID: 0}
 --- !u!1 &8022529184805709378
 GameObject:
   m_ObjectHideFlags: 0

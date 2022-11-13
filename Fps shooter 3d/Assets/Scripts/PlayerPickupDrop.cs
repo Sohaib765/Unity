@@ -53,10 +53,5 @@ public class PlayerPickupDrop : MonoBehaviour
                 isGrabbed = false;
             }
         }
-
-        if (isRayIsHittingTheGrabbleObject)
-        {
-            //Debug.Log("ray is hitting");
-        }
     }
 }

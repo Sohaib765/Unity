@@ -13,6 +13,7 @@ TagManager:
   - Weapon
   - Door_Trigger
   - Weapon_Trigger
+  - Card
   layers:
   - Default
   - TransparentFX
