@@ -14,6 +14,8 @@ TagManager:
   - Door_Trigger
   - Weapon_Trigger
   - Card
+  - LockedDoor
+  - Door
   layers:
   - Default
   - TransparentFX

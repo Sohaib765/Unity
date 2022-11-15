@@ -43,18 +43,28 @@ public class InteractionUI : MonoBehaviour
             doorLocked_Text.gameObject.active = false;
         }
 
-        if(interactiveObjectInRange && Input.GetKeyDown(KeyCode.E))
+        if(interactiveObjectInRange && Input.GetKeyDown(KeyCode.E) && ray.collider.CompareTag("LockedDoor"))
         {
             Debug.Log("The door is locked");
             doorLocked_Text.gameObject.active = true;
 
+            Debug.Log(ray.collider.tag);
+
             if (card == null)
             {
+                Debug.Log("Locked door open");
                 Debug.Log("card collected");
-                animationHandlerScriptRef.AnimationTriggerFunction();
+                animationHandlerScriptRef.LockedDoorAnimationTriggerFunction();
 
                 doorLocked_Text.gameObject.active = false;
             }
+        }
+
+        if(interactiveObjectInRange && Input.GetKeyDown(KeyCode.E) && ray.collider.CompareTag("Door"))
+        {
+            animationHandlerScriptRef.UnlockedDoorAnimationTriggerFunction();
+
+            Debug.Log("Unlocked door open");
         }
     }
 }

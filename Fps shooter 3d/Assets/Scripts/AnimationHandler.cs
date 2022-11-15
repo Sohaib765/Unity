@@ -5,27 +5,44 @@ using UnityEngine;
 public class AnimationHandler : MonoBehaviour
 {
     //Animation variables
-    public Animator doorAnim;
+    public Animator unlockedDoorAnim;
+    public Animator lockedDoorAnim;
     private float delayAmount = 7f;
 
     //public AudioSource gasAudio;
 
     //Triggers the open animation for the door
-    public void AnimationTriggerFunction()
+    public void LockedDoorAnimationTriggerFunction()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            doorAnim.SetBool("isTriggered", true);
+            lockedDoorAnim.SetBool("isTriggered", true);
 
-            StartCoroutine(CloseDoor());
+            StartCoroutine(CloseLockedDoor());
+        }
+    }
+
+    public void UnlockedDoorAnimationTriggerFunction()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            unlockedDoorAnim.SetBool("unlockedDoor", true);
+
+            StartCoroutine(CloseUnlockedDoor());
         }
     }
 
     //Coroutine that triggers the close animation for the door after a set amount of time
-    private IEnumerator CloseDoor()
+    private IEnumerator CloseLockedDoor()
     {
         yield return new WaitForSeconds(delayAmount);
+        lockedDoorAnim.SetBool("isTriggered", false);
+    }
 
-        doorAnim.SetBool("isTriggered", false);
+    
+    private IEnumerator CloseUnlockedDoor()
+    {
+        yield return new WaitForSeconds(delayAmount);
+        unlockedDoorAnim.SetBool("unlockedDoor", false);
     }
 }
