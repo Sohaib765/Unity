@@ -16,6 +16,7 @@ TagManager:
   - Card
   - LockedDoor
   - Door
+  - Door 02
   layers:
   - Default
   - TransparentFX

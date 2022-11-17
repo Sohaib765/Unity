@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,7 @@ public class InteractionUI : MonoBehaviour
     public bool interactiveObjectInRange;
     [SerializeField] private Transform playerCameraTransform;
     [SerializeField] private LayerMask interactivelayerMask;
-    private RaycastHit ray;
+    private RaycastHit hit;
     private float distance = 5f;
 
     //UI varible
@@ -23,18 +24,20 @@ public class InteractionUI : MonoBehaviour
 
     private void Awake()
     {
-        animationHandlerScriptRef = GetComponent<AnimationHandler>();
+        animationHandlerScriptRef = GameObject.FindGameObjectWithTag("Door").GetComponent<AnimationHandler>();
     }
 
     private void Update()
     {
-        interactiveObjectInRange = Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out ray,
+        interactiveObjectInRange = Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out hit,
                                    distance, interactivelayerMask);
-
+        
         if (interactiveObjectInRange)
         {
             Debug.Log("You can interact with this object");
             text.gameObject.active = true;
+
+            
         }
         else
         {
@@ -43,12 +46,12 @@ public class InteractionUI : MonoBehaviour
             doorLocked_Text.gameObject.active = false;
         }
 
-        if(interactiveObjectInRange && Input.GetKeyDown(KeyCode.E) && ray.collider.CompareTag("LockedDoor"))
+        if (interactiveObjectInRange && Input.GetKeyDown(KeyCode.E) && hit.collider.CompareTag("LockedDoor"))
         {
             Debug.Log("The door is locked");
             doorLocked_Text.gameObject.active = true;
 
-            Debug.Log(ray.collider.tag);
+            Debug.Log(hit.collider.tag);
 
             if (card == null)
             {
@@ -60,11 +63,16 @@ public class InteractionUI : MonoBehaviour
             }
         }
 
-        if(interactiveObjectInRange && Input.GetKeyDown(KeyCode.E) && ray.collider.CompareTag("Door"))
+        if (interactiveObjectInRange && Input.GetKeyDown(KeyCode.E) && hit.collider.CompareTag("Door"))
         {
             animationHandlerScriptRef.UnlockedDoorAnimationTriggerFunction();
 
             Debug.Log("Unlocked door open");
+
+            //animationHandlerScriptRef.lockedDoorAnim.enabled = true;
         }
+
+
     }
+
 }

@@ -434,7 +434,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4361b3b9c85841209e1dfc73d33a73b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorAnim: {fileID: 4976804153647906938}
+  unlockedDoorAnim: {fileID: 0}
+  lockedDoorAnim: {fileID: 0}
 --- !u!114 &5318822437069736105
 MonoBehaviour:
   m_ObjectHideFlags: 0

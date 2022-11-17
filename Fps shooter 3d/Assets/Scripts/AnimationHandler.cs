@@ -5,11 +5,18 @@ using UnityEngine;
 public class AnimationHandler : MonoBehaviour
 {
     //Animation variables
-    public Animator unlockedDoorAnim;
-    public Animator lockedDoorAnim;
+    [SerializeField] private Animator unlockedDoorAnim;
+    [SerializeField] private Animator lockedDoorAnim;
+    //[SerializeField] private Animator door02Anim;
     private float delayAmount = 7f;
 
     //public AudioSource gasAudio;
+
+    private void Awake()
+    {
+        unlockedDoorAnim = GetComponentInChildren<Animator>();
+        lockedDoorAnim = GetComponentInChildren<Animator>();
+    }
 
     //Triggers the open animation for the door
     public void LockedDoorAnimationTriggerFunction()
@@ -21,28 +28,29 @@ public class AnimationHandler : MonoBehaviour
             StartCoroutine(CloseLockedDoor());
         }
     }
-
-    public void UnlockedDoorAnimationTriggerFunction()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            unlockedDoorAnim.SetBool("unlockedDoor", true);
-
-            StartCoroutine(CloseUnlockedDoor());
-        }
-    }
-
-    //Coroutine that triggers the close animation for the door after a set amount of time
     private IEnumerator CloseLockedDoor()
     {
         yield return new WaitForSeconds(delayAmount);
         lockedDoorAnim.SetBool("isTriggered", false);
     }
 
-    
+
+    public void UnlockedDoorAnimationTriggerFunction()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            unlockedDoorAnim.SetBool("Door02", true);
+
+            //door02Anim.SetBool("Door02", true);
+
+            StartCoroutine(CloseUnlockedDoor());
+        }
+    }
     private IEnumerator CloseUnlockedDoor()
     {
         yield return new WaitForSeconds(delayAmount);
-        unlockedDoorAnim.SetBool("unlockedDoor", false);
+        unlockedDoorAnim.SetBool("Door02", false);
+
+        //door02Anim.SetBool("Door02", false);
     }
 }
