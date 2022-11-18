@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour
 
         rb.AddForce(moveDirection * walkSpeed * 10f * Time.deltaTime);
 
-        //Check if player is moving and plays waling sound
+        //Check if player is moving and plays the walking sound
         if(moveDirection.x != 0 || moveDirection.z != 0 && isGrounded)
         {
             isMoving = true;
