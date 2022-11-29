@@ -135,13 +135,19 @@ public class Gun : MonoBehaviour
         {
             Debug.Log(rayHit.collider.name);
 
-            if (rayHit.collider.CompareTag("Enemy") || rayHit.collider.CompareTag("GB_Obj"))
+            if (rayHit.collider.CompareTag("GB_Obj"))
             {
-                //rayHit.collider.GetComponent<ShootingAI>().TakeDamage(damage);
-                Debug.Log("You hit an enemy");
+                Debug.Log("You hit an object");
 
                 //Add some force to the object when being hit
                 var force = 20f;
+                Rigidbody rb = rayHit.collider.gameObject.GetComponent<Rigidbody>();
+                rb.AddForce(transform.forward * force, ForceMode.Impulse);
+            }
+            if (rayHit.collider.CompareTag("Enemy"))
+            {
+                Debug.Log("You hit an enemy");
+                var force = 10f;
                 Rigidbody rb = rayHit.collider.gameObject.GetComponent<Rigidbody>();
                 rb.AddForce(transform.forward * force, ForceMode.Impulse);
             }

@@ -17,6 +17,8 @@ TagManager:
   - LockedDoor
   - Door
   - Door 02
+  - Box
+  - Paper
   layers:
   - Default
   - TransparentFX
