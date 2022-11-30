@@ -4,27 +4,53 @@ using UnityEngine;
 
 public class AnimationHandler : MonoBehaviour
 {
-    public Animator doorAnim;
+    //Animation variables
+    [SerializeField] private Animator unlockedDoorAnim;
+    [SerializeField] private Animator lockedDoorAnim;
+    //[SerializeField] private Animator door02Anim;
+    private float delayAmount = 7f;
 
-    public AudioSource gasAudio;
+    //public AudioSource gasAudio;
 
-    private void OnTriggerEnter(Collider other)
+    private void Awake()
     {
-        if (other.CompareTag("Player") || other.CompareTag("Medium cube"))
-        {
-            doorAnim.SetBool("IsTriggered", true);
-            Debug.Log("Open");
-
-            gasAudio.Play();
-        }
+        unlockedDoorAnim = GetComponentInChildren<Animator>();
+        lockedDoorAnim = GetComponentInChildren<Animator>();
     }
 
-    private void OnTriggerExit(Collider other)
+    //Triggers the open animation for the door
+    public void LockedDoorAnimationTriggerFunction()
     {
-        if (other.CompareTag("Player") || other.CompareTag("Medium cube"))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            doorAnim.SetBool("IsTriggered", false);
-            Debug.Log("Close");
+            lockedDoorAnim.SetBool("isTriggered", true);
+
+            StartCoroutine(CloseLockedDoor());
         }
+    }
+    private IEnumerator CloseLockedDoor()
+    {
+        yield return new WaitForSeconds(delayAmount);
+        lockedDoorAnim.SetBool("isTriggered", false);
+    }
+
+
+    public void UnlockedDoorAnimationTriggerFunction()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            unlockedDoorAnim.SetBool("Door02", true);
+
+            //door02Anim.SetBool("Door02", true);
+
+            StartCoroutine(CloseUnlockedDoor());
+        }
+    }
+    private IEnumerator CloseUnlockedDoor()
+    {
+        yield return new WaitForSeconds(delayAmount);
+        unlockedDoorAnim.SetBool("Door02", false);
+
+        //door02Anim.SetBool("Door02", false);
     }
 }

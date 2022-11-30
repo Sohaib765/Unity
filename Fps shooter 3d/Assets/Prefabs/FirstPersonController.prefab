@@ -109,6 +109,9 @@ GameObject:
   - component: {fileID: 7088163817452198989}
   - component: {fileID: 7088163816781156961}
   - component: {fileID: 7088163816781156962}
+  - component: {fileID: 7088163816781156963}
+  - component: {fileID: 7088163816781156971}
+  - component: {fileID: 7088163816781156956}
   m_Layer: 7
   m_Name: FirstPersonController
   m_TagString: Player
@@ -423,6 +426,52 @@ MonoBehaviour:
   gunPickAndDropRef: {fileID: 0}
   pickUpUI: {fileID: 0}
   collider: []
+--- !u!114 &7088163816781156963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7088163817452198990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0333ef9c44114c6aa8bf815ec56bddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardCollected_text: {fileID: 0}
+  anim: {fileID: 0}
+--- !u!114 &7088163816781156971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7088163817452198990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8714a13fbda984763a4b6866afc48e75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactiveObjectInRange: 0
+  playerCameraTransform: {fileID: 0}
+  interactivelayerMask:
+    serializedVersion: 2
+    m_Bits: 2097152
+  text: {fileID: 0}
+  doorLocked_Text: {fileID: 0}
+  card: {fileID: 0}
+--- !u!114 &7088163816781156956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7088163817452198990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d44d25cd688c34bf3b17864ad9b2330d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7088163817592559641
 GameObject:
   m_ObjectHideFlags: 0

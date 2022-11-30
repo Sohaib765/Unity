@@ -23,6 +23,8 @@ public class UIEnable : MonoBehaviour
 
     public Collider[] collider;
 
+    public Collider[] clipBoardCollider;
+
     private void Awake()
     {
         //Reference of the script
@@ -44,7 +46,7 @@ public class UIEnable : MonoBehaviour
         {
             if (coll.gameObject.CompareTag("GB_Obj"))
             {
-                Debug.Log("Object is in range");
+                //Debug.Log("Object is in range");
 
                 pickUpUI.gameObject.active = true;
 
@@ -65,12 +67,11 @@ public class UIEnable : MonoBehaviour
         }
         if (collider.Length == 0)
         {
-            Debug.Log("Object is out of the range");
+            //Debug.Log("Object is out of the range");
 
             pickUpUI.gameObject.active = false;
         }
     }
-
 
     //Draw a sphere around the player to visualize the enable range
     public void OnDrawGizmosSelected()

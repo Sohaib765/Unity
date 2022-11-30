@@ -13,6 +13,12 @@ TagManager:
   - Weapon
   - Door_Trigger
   - Weapon_Trigger
+  - Card
+  - LockedDoor
+  - Door
+  - Door 02
+  - Box
+  - Paper
   layers:
   - Default
   - TransparentFX
@@ -25,7 +31,7 @@ TagManager:
   - WhatIsGround
   - 
   - Enemy
-  - UnequippedWeaponLayer
+  - 
   - EquippedWeaponLayer
   - Button_ControlRoom
   - Button
@@ -35,8 +41,8 @@ TagManager:
   - Envoirnment
   - InteractibleObjectLayer
   - Weapon
-  - 
-  - 
+  - Interactible
+  - NotInteractibleAnymore
   - 
   - 
   - 
