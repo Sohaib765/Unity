@@ -23,6 +23,8 @@ public class UIEnable : MonoBehaviour
 
     public Collider[] collider;
 
+    public Collider[] clipBoardCollider;
+
     private void Awake()
     {
         //Reference of the script
@@ -70,7 +72,6 @@ public class UIEnable : MonoBehaviour
             pickUpUI.gameObject.active = false;
         }
     }
-
 
     //Draw a sphere around the player to visualize the enable range
     public void OnDrawGizmosSelected()
